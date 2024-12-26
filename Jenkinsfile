@@ -25,7 +25,7 @@ pipeline {
 
         stage('Terraform apply') {
             steps {
-                sh 'terraform apply --auto-approve' //Para que no haya problemas de un crasheo o algo por la aprobación
+                sh 'terraform ${action} --auto-approve' // auto-approve para que no haya problemas de un crasheo o algo por la aprobación
             }
         }
 
